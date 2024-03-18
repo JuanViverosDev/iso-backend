@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "woDmz9SS5DVXNeFN7xD/KV5R9b23XJXwzkIYwcjJaIGOL47iGYp+0KgH7ck2Fhs52Y7z8IrAAZeMmbnrc9YnzQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jvive\\RiderProjects\\Iso.Backend\\Iso.Backend.Web\\Iso.Backend.Web.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jvive\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.1\\microsoft.aspnetcore.openapi.8.0.1.nupkg.sha512",
+    "C:\\Users\\jvive\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\jvive\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\jvive\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\jvive\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\jvive\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\jvive\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
