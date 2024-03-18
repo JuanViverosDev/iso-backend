@@ -7,10 +7,16 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Base\" />
-      <Folder Include="Common\" />
       <Folder Include="DTO\" />
       <Folder Include="Service\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Iso.Backend.Domain\Iso.Backend.Domain.csproj" />
     </ItemGroup>
 
 </Project>
