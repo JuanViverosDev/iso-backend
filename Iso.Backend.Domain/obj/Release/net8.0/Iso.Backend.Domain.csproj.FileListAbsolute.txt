@@ -1,0 +1,15 @@
+C:\Users\jvive\RiderProjects\Iso.Backend\Iso.Backend.Domain\bin\Release\net8.0\Iso.Backend.Domain.deps.json
+C:\Users\jvive\RiderProjects\Iso.Backend\Iso.Backend.Domain\bin\Release\net8.0\Iso.Backend.Domain.runtimeconfig.json
+C:\Users\jvive\RiderProjects\Iso.Backend\Iso.Backend.Domain\bin\Release\net8.0\Iso.Backend.Domain.dll
+C:\Users\jvive\RiderProjects\Iso.Backend\Iso.Backend.Domain\bin\Release\net8.0\Iso.Backend.Domain.pdb
+C:\Users\jvive\RiderProjects\Iso.Backend\Iso.Backend.Domain\obj\Release\net8.0\Iso.Backend.Domain.csproj.AssemblyReference.cache
+C:\Users\jvive\RiderProjects\Iso.Backend\Iso.Backend.Domain\obj\Release\net8.0\Iso.Backend.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jvive\RiderProjects\Iso.Backend\Iso.Backend.Domain\obj\Release\net8.0\Iso.Backend.Domain.AssemblyInfoInputs.cache
+C:\Users\jvive\RiderProjects\Iso.Backend\Iso.Backend.Domain\obj\Release\net8.0\Iso.Backend.Domain.AssemblyInfo.cs
+C:\Users\jvive\RiderProjects\Iso.Backend\Iso.Backend.Domain\obj\Release\net8.0\Iso.Backend.Domain.csproj.CoreCompileInputs.cache
+C:\Users\jvive\RiderProjects\Iso.Backend\Iso.Backend.Domain\obj\Release\net8.0\Iso.Backend.Domain.sourcelink.json
+C:\Users\jvive\RiderProjects\Iso.Backend\Iso.Backend.Domain\obj\Release\net8.0\Iso.Backend.Domain.dll
+C:\Users\jvive\RiderProjects\Iso.Backend\Iso.Backend.Domain\obj\Release\net8.0\refint\Iso.Backend.Domain.dll
+C:\Users\jvive\RiderProjects\Iso.Backend\Iso.Backend.Domain\obj\Release\net8.0\Iso.Backend.Domain.pdb
+C:\Users\jvive\RiderProjects\Iso.Backend\Iso.Backend.Domain\obj\Release\net8.0\Iso.Backend.Domain.genruntimeconfig.cache
+C:\Users\jvive\RiderProjects\Iso.Backend\Iso.Backend.Domain\obj\Release\net8.0\ref\Iso.Backend.Domain.dll
