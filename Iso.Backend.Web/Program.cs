@@ -1,3 +1,7 @@
+using Iso.Backend.Infrastructure.Context;
+using Microsoft.EntityFrameworkCore;
+using Npgsql;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,7 +10,16 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
-
+var connectionString = builder.Configuration.GetConnectionString("SQLConnection");
+builder.Services.AddDbContext<IsoBackendDbContext>(options =>
+    options.UseNpgsql(connectionString));
+NpgsqlConnection.GlobalTypeMapper.EnableDynamicJson();  
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddAutoMapper(typeof(Program).Assembly);
+builder.Services.AddControllersWithViews()
+    .AddNewtonsoftJson(options =>
+        options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+    );
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

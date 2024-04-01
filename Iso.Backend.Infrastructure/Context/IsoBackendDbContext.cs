@@ -1,3 +1,4 @@
+using Iso.Backend.Domain.Entities.Auth;
 using Microsoft.EntityFrameworkCore;
 
 namespace Iso.Backend.Infrastructure.Context
@@ -5,6 +6,12 @@ namespace Iso.Backend.Infrastructure.Context
     public class IsoBackendDbContext : DbContext
     {
 
+        #region Auth Domain
+        
+        public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        
+        #endregion Auth Domain
 
         public IsoBackendDbContext()
         {
