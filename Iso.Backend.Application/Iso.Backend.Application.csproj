@@ -7,11 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="DTO\" />
-      <Folder Include="Service\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\Iso.Backend.Domain\Iso.Backend.Domain.csproj" />
     </ItemGroup>
 
