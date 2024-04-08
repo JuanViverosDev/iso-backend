@@ -27,7 +27,7 @@
 
     <ItemGroup>
       <Folder Include="Configuration\" />
-      <Folder Include="Controllers\" />
+      <Folder Include="Controllers\Products\" />
     </ItemGroup>
 
     <ItemGroup>

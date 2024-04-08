@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Iso.Backend.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+13ba2fc2fe5a140c56296178594979358495553d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1d49b0e5b2e7f1ee32f397d62dda899bbedad3cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("Iso.Backend.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Iso.Backend.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

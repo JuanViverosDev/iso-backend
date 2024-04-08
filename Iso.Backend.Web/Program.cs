@@ -9,17 +9,19 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var app = builder.Build();
 var connectionString = builder.Configuration.GetConnectionString("SQLConnection");
 builder.Services.AddDbContext<IsoBackendDbContext>(options =>
     options.UseNpgsql(connectionString));
-NpgsqlConnection.GlobalTypeMapper.EnableDynamicJson();  
+NpgsqlConnection.GlobalTypeMapper.EnableDynamicJson();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 builder.Services.AddControllersWithViews()
     .AddNewtonsoftJson(options =>
         options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
     );
+
+var app = builder.Build();
+
 // Configure the HTTP request pipeline.
 // if (app.Environment.IsDevelopment())
 // {

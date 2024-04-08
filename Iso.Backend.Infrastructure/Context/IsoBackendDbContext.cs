@@ -1,4 +1,5 @@
 using Iso.Backend.Domain.Entities.Auth;
+using Iso.Backend.Domain.Entities.Orders;
 using Microsoft.EntityFrameworkCore;
 
 namespace Iso.Backend.Infrastructure.Context
@@ -12,6 +13,16 @@ namespace Iso.Backend.Infrastructure.Context
         public DbSet<Role> Roles { get; set; }
         
         #endregion Auth Domain
+        
+        #region Orders Domain
+        
+        public DbSet<Design> Designs { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<Item> Items { get; set; }
+        public DbSet<CommentItem> CommentItems { get; set; }
+        
+        #endregion Orders Domain
 
         public IsoBackendDbContext()
         {

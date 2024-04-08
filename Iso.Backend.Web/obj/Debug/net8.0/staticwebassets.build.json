@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "fvK7c+qTiXE8g5hh8Us4ZAcRwy17q9JgfulYDF9WCrM=",
+  "Source": "Iso.Backend.Web",
+  "BasePath": "_content/Iso.Backend.Web",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
