@@ -173,6 +173,12 @@ namespace Iso.Backend.Infraestructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("DesignId");
+
+                    b.HasIndex("ItemId");
+
+                    b.HasIndex("UserId");
+
                     b.ToTable("CommentItems");
                 });
 
@@ -201,7 +207,12 @@ namespace Iso.Backend.Infraestructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<Guid?>("UserId")
+                        .HasColumnType("uuid");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Designs");
                 });
@@ -253,7 +264,39 @@ namespace Iso.Backend.Infraestructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<Guid?>("CommentItemId")
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
+
+                    b.Property<DateTime>("Modified")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("State")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("Iso.Backend.Domain.Entities.Orders.OrderDetail", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
                     b.Property<DateTime>("Created")
@@ -277,24 +320,18 @@ namespace Iso.Backend.Infraestructure.Migrations
                     b.Property<DateTime>("Modified")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("State")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<Guid>("UserId")
+                    b.Property<Guid>("OrderId")
                         .HasColumnType("uuid");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CommentItemId");
 
                     b.HasIndex("DesignId");
 
                     b.HasIndex("ItemId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("OrderId");
 
-                    b.ToTable("Orders");
+                    b.ToTable("OrderDetail");
                 });
 
             modelBuilder.Entity("RoleUser", b =>
@@ -312,6 +349,34 @@ namespace Iso.Backend.Infraestructure.Migrations
                     b.ToTable("RoleUser");
                 });
 
+            modelBuilder.Entity("Iso.Backend.Domain.Entities.Orders.CommentItem", b =>
+                {
+                    b.HasOne("Iso.Backend.Domain.Entities.Orders.Design", null)
+                        .WithMany("Comments")
+                        .HasForeignKey("DesignId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Iso.Backend.Domain.Entities.Orders.Item", null)
+                        .WithMany("Comments")
+                        .HasForeignKey("ItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Iso.Backend.Domain.Entities.Auth.User", null)
+                        .WithMany("Comments")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Iso.Backend.Domain.Entities.Orders.Design", b =>
+                {
+                    b.HasOne("Iso.Backend.Domain.Entities.Auth.User", null)
+                        .WithMany("Designs")
+                        .HasForeignKey("UserId");
+                });
+
             modelBuilder.Entity("Iso.Backend.Domain.Entities.Orders.Item", b =>
                 {
                     b.HasOne("Iso.Backend.Domain.Entities.Orders.Category", null)
@@ -323,25 +388,30 @@ namespace Iso.Backend.Infraestructure.Migrations
 
             modelBuilder.Entity("Iso.Backend.Domain.Entities.Orders.Order", b =>
                 {
-                    b.HasOne("Iso.Backend.Domain.Entities.Orders.CommentItem", null)
+                    b.HasOne("Iso.Backend.Domain.Entities.Auth.User", null)
                         .WithMany("Orders")
-                        .HasForeignKey("CommentItemId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
 
+            modelBuilder.Entity("Iso.Backend.Domain.Entities.Orders.OrderDetail", b =>
+                {
                     b.HasOne("Iso.Backend.Domain.Entities.Orders.Design", null)
-                        .WithMany("Orders")
+                        .WithMany("OrderDetails")
                         .HasForeignKey("DesignId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Iso.Backend.Domain.Entities.Orders.Item", null)
-                        .WithMany("Orders")
+                        .WithMany("OrderDetails")
                         .HasForeignKey("ItemId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Iso.Backend.Domain.Entities.Auth.User", null)
-                        .WithMany("Orders")
-                        .HasForeignKey("UserId")
+                    b.HasOne("Iso.Backend.Domain.Entities.Orders.Order", null)
+                        .WithMany("OrderDetails")
+                        .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -363,6 +433,10 @@ namespace Iso.Backend.Infraestructure.Migrations
 
             modelBuilder.Entity("Iso.Backend.Domain.Entities.Auth.User", b =>
                 {
+                    b.Navigation("Comments");
+
+                    b.Navigation("Designs");
+
                     b.Navigation("Orders");
                 });
 
@@ -371,19 +445,23 @@ namespace Iso.Backend.Infraestructure.Migrations
                     b.Navigation("Items");
                 });
 
-            modelBuilder.Entity("Iso.Backend.Domain.Entities.Orders.CommentItem", b =>
-                {
-                    b.Navigation("Orders");
-                });
-
             modelBuilder.Entity("Iso.Backend.Domain.Entities.Orders.Design", b =>
                 {
-                    b.Navigation("Orders");
+                    b.Navigation("Comments");
+
+                    b.Navigation("OrderDetails");
                 });
 
             modelBuilder.Entity("Iso.Backend.Domain.Entities.Orders.Item", b =>
                 {
-                    b.Navigation("Orders");
+                    b.Navigation("Comments");
+
+                    b.Navigation("OrderDetails");
+                });
+
+            modelBuilder.Entity("Iso.Backend.Domain.Entities.Orders.Order", b =>
+                {
+                    b.Navigation("OrderDetails");
                 });
 #pragma warning restore 612, 618
         }

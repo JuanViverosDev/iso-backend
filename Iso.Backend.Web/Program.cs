@@ -1,3 +1,5 @@
+using Dissau.DigisignCol.Infrastructure.Persistence;
+using Iso.Backend.Application.Common.Interfaces;
 using Iso.Backend.Application.Services.Orders.Implementation;
 using Iso.Backend.Application.Services.Orders.Interfaces;
 using Iso.Backend.Infrastructure.Context;
@@ -33,6 +35,9 @@ builder.Services.AddAutoMapper(typeof(Program).Assembly);
 #region Application Services
 
 builder.Services.AddScoped<IOrdersService, OrdersService>();
+
+builder.Services.AddScoped<IItemsService, ItemsService>();
+builder.Services.AddScoped<IItemRepository, ItemRepository>();
 
 #endregion
 

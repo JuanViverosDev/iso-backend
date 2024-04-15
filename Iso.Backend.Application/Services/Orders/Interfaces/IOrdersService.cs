@@ -1,6 +1,6 @@
 ﻿// using Iso.Backend.Application.DTO.;
 
-using Iso.Backend.Application.DTO.Contracts;
+using Iso.Backend.Application.DTO.Items;
 
 namespace Iso.Backend.Application.Services.Orders.Interfaces
 {

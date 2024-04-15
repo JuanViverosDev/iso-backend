@@ -14,5 +14,7 @@ namespace Iso.Backend.Domain.Entities.Auth
         public string? Phone { get; set; } = string.Empty;
         public virtual ICollection<Role>? RoleUsers { get; set; }
         public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<CommentItem> Comments { get; set; }
+        public virtual ICollection<Design> Designs { get; set; }
     }
 }

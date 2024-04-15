@@ -12,6 +12,5 @@ namespace Iso.Backend.Domain.Entities.Orders
         public Guid DesignId { get; set; }
         public string Content { get; set; } = string.Empty;
         public int Order { get; set; } = 0;
-        public virtual ICollection<Order> Orders { get; set; }
     }
 }

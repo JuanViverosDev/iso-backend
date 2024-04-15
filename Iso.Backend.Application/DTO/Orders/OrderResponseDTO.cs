@@ -1,4 +1,4 @@
-namespace Iso.Backend.Application.DTO.Contracts;
+namespace Iso.Backend.Application.DTO.Items;
 
 public class OrderResponseDTO
 {

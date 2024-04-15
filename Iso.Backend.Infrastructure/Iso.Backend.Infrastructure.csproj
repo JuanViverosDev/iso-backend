@@ -9,7 +9,6 @@
 
     <ItemGroup>
       <Folder Include="Migrations\" />
-      <Folder Include="Persistence\" />
     </ItemGroup>
 
     <ItemGroup>
@@ -29,6 +28,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Iso.Backend.Application\Iso.Backend.Application.csproj" />
       <ProjectReference Include="..\Iso.Backend.Domain\Iso.Backend.Domain.csproj" />
     </ItemGroup>
 

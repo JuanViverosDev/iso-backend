@@ -113,3 +113,5 @@ C:\Users\jvive\RiderProjects\Iso.Backend\Iso.Backend.Web\obj\Release\net8.0\refi
 C:\Users\jvive\RiderProjects\Iso.Backend\Iso.Backend.Web\obj\Release\net8.0\Iso.Backend.Web.pdb
 C:\Users\jvive\RiderProjects\Iso.Backend\Iso.Backend.Web\obj\Release\net8.0\Iso.Backend.Web.genruntimeconfig.cache
 C:\Users\jvive\RiderProjects\Iso.Backend\Iso.Backend.Web\obj\Release\net8.0\ref\Iso.Backend.Web.dll
+C:\Users\jvive\RiderProjects\Iso.Backend\Iso.Backend.Web\bin\Release\net8.0\Iso.Backend.Application.dll
+C:\Users\jvive\RiderProjects\Iso.Backend\Iso.Backend.Web\bin\Release\net8.0\Iso.Backend.Application.pdb

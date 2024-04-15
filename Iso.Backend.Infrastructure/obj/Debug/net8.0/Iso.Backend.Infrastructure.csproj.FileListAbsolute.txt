@@ -16,3 +16,5 @@ C:\Users\jvive\RiderProjects\Iso.Backend\Iso.Backend.Infrastructure\obj\Debug\ne
 C:\Users\jvive\RiderProjects\Iso.Backend\Iso.Backend.Infrastructure\obj\Debug\net8.0\Iso.Backend.Infrastructure.pdb
 C:\Users\jvive\RiderProjects\Iso.Backend\Iso.Backend.Infrastructure\obj\Debug\net8.0\Iso.Backend.Infrastructure.genruntimeconfig.cache
 C:\Users\jvive\RiderProjects\Iso.Backend\Iso.Backend.Infrastructure\obj\Debug\net8.0\ref\Iso.Backend.Infrastructure.dll
+C:\Users\jvive\RiderProjects\Iso.Backend\Iso.Backend.Infrastructure\bin\Debug\net8.0\Iso.Backend.Application.dll
+C:\Users\jvive\RiderProjects\Iso.Backend\Iso.Backend.Infrastructure\bin\Debug\net8.0\Iso.Backend.Application.pdb

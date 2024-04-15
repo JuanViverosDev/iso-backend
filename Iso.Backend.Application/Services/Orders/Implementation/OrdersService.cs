@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Iso.Backend.Application.DTO.Contracts;
+using Iso.Backend.Application.DTO.Items;
 using Iso.Backend.Application.Services.Orders.Interfaces;
 
 namespace Iso.Backend.Application.Services.Orders.Implementation

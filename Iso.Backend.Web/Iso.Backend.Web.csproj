@@ -26,10 +26,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Configuration\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\Iso.Backend.Application\Iso.Backend.Application.csproj" />
       <ProjectReference Include="..\Iso.Backend.Infrastructure\Iso.Backend.Infrastructure.csproj" />
     </ItemGroup>
