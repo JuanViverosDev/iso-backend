@@ -1,3 +1,4 @@
+using Iso.Backend.Application.DTO.Items;
 using Iso.Backend.Application.Services.Orders.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,34 +15,87 @@ public class OrdersController : ControllerBase
         _ordersService = ordersService;
     }
 
-    [HttpGet]
-    public IActionResult GetOrders()
+    [HttpPost]
+    public async Task<IActionResult> CreateOrder(OrderCreateDTO orderCreateDTO)
     {
         try
         {
-            return Ok("Orders");
+            var result = await _ordersService.CreateOrder(orderCreateDTO);
+            return Ok(result);
         }
         catch (Exception e)
         {
-            return BadRequest(e.Message);
+            return Problem(e.Message);
         }
     }
-
-    [HttpPost]
-    public IActionResult CreateOrder()
+    
+    [HttpGet("{orderId}")]
+    public async Task<IActionResult> GetOrder(Guid orderId)
     {
-        return Ok("Order");
+        try
+        {
+            var result = await _ordersService.GetOrder(orderId);
+            return Ok(result);
+        }
+        catch (Exception e)
+        {
+            return Problem(e.Message);
+        }
     }
-
-    [HttpPost("{orderId}")]
-    public IActionResult UpdateOrder(Guid orderId)
+    
+    [HttpGet]
+    public async Task<IActionResult> GetOrders()
     {
-        return Ok("Order");
+        try
+        {
+            var result = await _ordersService.GetOrders();
+            return Ok(result);
+        }
+        catch (Exception e)
+        {
+            return Problem(e.Message);
+        }
     }
-
+    
+    [HttpPut("{orderId}")]
+    public async Task<IActionResult> UpdateOrder(Guid orderId, OrderCreateDTO orderCreateDTO)
+    {
+        try
+        {
+            var result = await _ordersService.UpdateOrder(orderId, orderCreateDTO);
+            return Ok(result);
+        }
+        catch (Exception e)
+        {
+            return Problem(e.Message);
+        }
+    }
+    
     [HttpDelete("{orderId}")]
-    public IActionResult DeleteOrder(Guid orderId)
+    public async Task<IActionResult> DeleteOrder(Guid orderId)
     {
-        return Ok("Order");
+        try
+        {
+            var result = await _ordersService.DeleteOrder(orderId);
+            return Ok(result);
+        }
+        catch (Exception e)
+        {
+            return Problem(e.Message);
+        }
+    }
+    
+    [HttpPost("Detail")]
+    public async Task<IActionResult> CreateOrderDetail(OrderDetailCreateDTO orderDetailCreateDTO)
+    {
+        try
+        {
+            var result = await _ordersService.CreateOrderDetail(orderDetailCreateDTO);
+            return Ok(result);
+        }
+        catch (Exception e)
+        {
+            return Problem(e.Message);
+        }
     }
 }

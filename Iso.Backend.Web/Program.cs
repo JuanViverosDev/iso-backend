@@ -35,6 +35,8 @@ builder.Services.AddAutoMapper(typeof(Program).Assembly);
 #region Application Services
 
 builder.Services.AddScoped<IOrdersService, OrdersService>();
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+builder.Services.AddScoped<IOrderDetailRepository, OrderDetailRepository>();
 
 builder.Services.AddScoped<IItemsService, ItemsService>();
 builder.Services.AddScoped<IItemRepository, ItemRepository>();

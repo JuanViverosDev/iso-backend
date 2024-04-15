@@ -12,5 +12,13 @@ public class MappingProfile : Profile
         CreateMap<Item, ItemResponseDTO>().ReverseMap();
         CreateMap<ItemCreateDTO, Item>();
         CreateMap<ItemCreateDTO, Item>().ReverseMap();
+        CreateMap<Order, OrderResponseDTO>();
+        CreateMap<Order, OrderResponseDTO>().ReverseMap();
+        CreateMap<OrderCreateDTO, Order>();
+        CreateMap<OrderCreateDTO, Order>().ReverseMap();
+        CreateMap<OrderDetail, OrderDetailResponseDTO>();
+        CreateMap<OrderDetail, OrderDetailResponseDTO>().ReverseMap();
+        CreateMap<OrderDetailCreateDTO, OrderDetail>();
+        CreateMap<OrderDetailCreateDTO, OrderDetail>().ReverseMap();
     }
 }

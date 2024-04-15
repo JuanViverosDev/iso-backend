@@ -642,6 +642,7 @@
       "Iso.Backend.Infrastructure/1.0.0": {
         "dependencies": {
           "AutoMapper": "13.0.1",
+          "Iso.Backend.Application": "1.0.0",
           "Iso.Backend.Domain": "1.0.0",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "8.0.0",
           "Microsoft.EntityFrameworkCore": "8.0.0",
