@@ -4,6 +4,7 @@ using Iso.Backend.Domain.Entities.JsonModels;
 using Iso.Backend.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -12,9 +13,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Iso.Backend.Infraestructure.Migrations
 {
     [DbContext(typeof(IsoBackendDbContext))]
-    partial class IsoBackendDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240415214548_Add Details to all entities")]
+    partial class AddDetailstoallentities
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

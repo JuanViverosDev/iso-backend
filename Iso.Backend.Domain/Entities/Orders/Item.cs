@@ -1,6 +1,8 @@
 ﻿
 
+using System.ComponentModel.DataAnnotations.Schema;
 using Iso.Backend.Domain.Entities.Base;
+using Iso.Backend.Domain.Entities.JsonModels;
 
 namespace Iso.Backend.Domain.Entities.Orders
 {
@@ -12,5 +14,7 @@ namespace Iso.Backend.Domain.Entities.Orders
         public Guid CategoryId { get; set; }
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
         public virtual ICollection<CommentItem> Comments { get; set; }
+        [Column(TypeName = "jsonb")]
+        public ItemDetails? Details { get; set; }
     }
 }
