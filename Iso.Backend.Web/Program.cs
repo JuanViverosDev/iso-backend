@@ -41,6 +41,9 @@ builder.Services.AddScoped<IOrderDetailRepository, OrderDetailRepository>();
 builder.Services.AddScoped<IItemsService, ItemsService>();
 builder.Services.AddScoped<IItemRepository, ItemRepository>();
 
+builder.Services.AddScoped<IDesignsService, DesignsService>();
+builder.Services.AddScoped<IDesignRepository, DesignRepository>();
+
 #endregion
 
 var app = builder.Build();

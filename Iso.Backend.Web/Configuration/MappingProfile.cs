@@ -22,5 +22,7 @@ public class MappingProfile : Profile
         CreateMap<OrderDetailCreateDTO, OrderDetail>().ReverseMap();
         CreateMap<Design, DesignResponseDTO>();
         CreateMap<Design, DesignResponseDTO>().ReverseMap();
+        CreateMap<DesignCreateDTO, Design>();
+        CreateMap<DesignCreateDTO, Design>().ReverseMap();
     }
 }
