@@ -9,5 +9,6 @@ namespace Iso.Backend.Domain.Entities.Orders
         public string Title { get; set; } = string.Empty;
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
         public virtual ICollection<CommentItem> Comments { get; set; }
+        public string MainImage { get; set; } = string.Empty;
     }
 }
